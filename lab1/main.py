@@ -52,7 +52,7 @@ def bridge(graph, word1, word2):
         return f"No bridge words from {word1} to {word2}!"
     return f"The bridge words from {word1} to {word2} are: " + ', '.join(bridge_words) + "."
 
-# 功能：生吃新文本
+# 功能：生成新文本
 def genWords(graph, text):
     words = split(text)
     new_text = words[0]
