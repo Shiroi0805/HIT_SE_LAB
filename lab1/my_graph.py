@@ -55,7 +55,7 @@ class Graph:
         edge_labels = nx.get_edge_attributes(self.graph, 'weight')
         nx.draw(self.graph, pos, with_labels=True, node_size=1500, node_color='lightblue', font_size=8)
         nx.draw_networkx_edge_labels(self.graph, pos, edge_labels=edge_labels, font_color='red')
-        plt.savefig(f"graph.png") # {self.file.file_path}
+        plt.savefig(f"./out/graph.png") # {self.file.file_path}
         plt.show()
     
     # 功能：查询桥接词 word1 -> word3 -> word2
@@ -126,7 +126,7 @@ class Graph:
                 break
         
         print("遍历的节点:", walk)
-        write_walk_to_file(walk, 'random_walk.txt')
+        write_walk_to_file(walk, './out/random_walk.txt')
         print("遍历的节点已写入文件 'random_walk.txt'。")
 
 
