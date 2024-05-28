@@ -3,3 +3,5 @@
 /lab1/*.png
 his/
 __pycache__/
+/lab1/out/*.png
+/lab1/out/*.txt
