@@ -2,3 +2,4 @@
 /lab1/*.pdf
 /lab1/*.png
 his/
+__pycache__/
