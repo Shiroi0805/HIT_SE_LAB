@@ -1,4 +1,6 @@
-/*.pdf
+*.pdf
+*.doc
+*.pptx
 /lab1/*.pdf
 /lab1/*.png
 his/
