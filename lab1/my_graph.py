@@ -28,7 +28,7 @@ class Text :
     
 # 图
 class Graph:
-    def __init__(self, path = 'input.txt'):
+    def __init__(self, path = 'D:\[study]\[studying]\软件工程\lab\lab1\input.txt'): # input.txt
         self.path = path
         self.file = Text(Graph.read(self.path))
         self.graph = Graph.createGraph(self.file.words)
