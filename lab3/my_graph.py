@@ -29,7 +29,7 @@ class Text:
         """
         初始化Text实例，保存原始文本并进行分词。
 
-        参数:
+        parameters:
             text (str): 输入的原始文本。
         """
         self.text = text
@@ -39,10 +39,10 @@ class Text:
         """
         清洗文本并按空白字符分词。
 
-        参数:
+        parameters:
             text (str): 需要被处理的文本。
 
-        返回:
+        return:
             list: 包含文本中所有单词的列表。
         """
         text = re.sub(f'[{string.punctuation}]', '', text)
@@ -75,7 +75,7 @@ class Graph:
         """
         初始化Graph实例。
 
-        参数:
+        parameters:
             path (str): 文件路径，默认为'input.txt'。
         """
         self.path = path
@@ -88,10 +88,10 @@ class Graph:
         """
         从文件中读取文本并转换为小写。
 
-        参数:
+        parameters:
             file_path (str): 文件路径。
 
-        返回:
+        return:
             str: 读取并转换为小写的文本内容。
         """
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -102,10 +102,10 @@ class Graph:
         """
         根据单词列表创建有向图。
 
-        参数:
+        parameters:
             words (list): 单词列表。
 
-        返回:
+        return:
             networkx.DiGraph: 创建的有向图。
         """
         graph = nx.DiGraph()
@@ -132,11 +132,11 @@ class Graph:
         """
         查询两个单词间的桥接词。
 
-        参数:
+        parameters:
             word1 (str): 起始词。
             word2 (str): 终止词。
 
-        返回:
+        return:
             str: 包含桥接词的字符串。
         """
         if word1 not in self.graph or word2 not in self.graph:
@@ -151,7 +151,7 @@ class Graph:
         """
         根据桥接词生成新文本。
 
-        参数:
+        parameters:
             text (str): 输入的文本。
         """
         words = Text(text)
@@ -171,11 +171,11 @@ class Graph:
         """
         计算两个单词之间的最短路径。
 
-        参数:
+        parameters:
             word1 (str): 起始词。
             word2 (str): 终止词。
 
-        返回:
+        return:
             tuple: 包含最短路径和路径长度。
         """
         try:
@@ -236,10 +236,10 @@ def split(text):
     """
     清洗文本并按空白字符分词。
 
-    参数:
+    parameters:
         text (str): 需要被处理的文本。
 
-    返回:
+    return:
         list: 包含文本中所有单词的列表。
     """
     text = re.sub(f'[{string.punctuation}]', '', text)
@@ -251,7 +251,7 @@ def write_walk_to_file(walk, file_name):
     """
     将随机游走的节点写入文件。
 
-    参数:
+    parameters:
         walk (list): 随机游走的节点列表。
         file_name (str): 文件路径。
     """

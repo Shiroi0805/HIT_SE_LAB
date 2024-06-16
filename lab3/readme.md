@@ -4,6 +4,7 @@
 
 - pylint
 - flake8
+- bandit
 
 ### pylint
 
@@ -17,6 +18,14 @@
 - 安装：`pip install flake8`
 - 使用：`flake8 [file_name.py]`
 - 每行代码最多79字符
+
+### bandit
+
+- 安装：`pip install bandit`
+- 使用：`bandit -r examples/ --format custom`
+  - `-r` 递归查找目录
+  - `--format custom` 自定义输出格式
+
 
 ## 单元测试
 
