@@ -15,6 +15,7 @@ Notes:
 """
 import my_graph as mg
 
+
 def menu():
     """
     功能选择菜单
@@ -26,6 +27,7 @@ def menu():
     print('4. 计算并展示两个单词之间的最短路径')
     print('5. 随机游走')
     print('0. 退出程序')
+
 
 def main():
     """
@@ -44,27 +46,28 @@ def main():
         if choice == '0':
             break
         if choice == '1':
-            graph.showDirectedGraph()
+            graph.show_directed_graph()
         elif choice == '2':
             word1 = input("请输入第一个单词: ").lower()
             word2 = input("请输入第二个单词: ").lower()
-            print(graph.queryBridgeWords(word1, word2))
+            print(graph.query_bridge_words(word1, word2))
         elif choice == '3':
             text = input("请输入一段话: ").lower()
-            graph.generateNewText(text)
+            graph.generate_new_text(text)
         elif choice == '4':
             word1 = input("请输入第一个单词: ").lower()
             word2 = input("请输入第二个单词: ").lower()
-            shortest_path, path_length = graph.calcShortestPath(word1, word2)
+            shortest_path, path_length = graph.calc_shortest_path(word1, word2)
             if isinstance(shortest_path, list):
                 print(f"最短路径为: {'→'.join(shortest_path)}")
                 print(f"路径长度（所有边权值之和）为: {path_length}")
             else:
                 print(shortest_path)
         elif choice == '5':
-            graph.randomWalk()
+            graph.random_walk()
         else:
             print('输入错误，请重新输入！')
+
 
 if __name__ == '__main__':
     main()
