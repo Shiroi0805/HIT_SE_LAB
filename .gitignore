@@ -8,3 +8,6 @@ his/
 __pycache__/
 /lab1/out/
 /lab3/out/
+*/.coverage
+.pytest_cache
+.vscode
