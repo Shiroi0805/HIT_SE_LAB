@@ -2,6 +2,7 @@
 *.doc
 *.pptx
 *.tmp
+*.zip
 /lab1/*.pdf
 /lab1/*.png
 his/
