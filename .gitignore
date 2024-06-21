@@ -5,10 +5,10 @@
 *.zip
 /lab1/*.pdf
 /lab1/*.png
-his/
-__pycache__/
 /lab1/out/
 /lab3/out/
 */.coverage
+his/
+__pycache__/
 .pytest_cache
 .vscode
